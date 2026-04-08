@@ -29,6 +29,12 @@ php artisan vendor:publish --tag=doku-config
 
 If you are still developing locally from a monorepo or path repository, keep the current path repository setup and require `roqianjas/doku-laravel` until the package is moved to its own repository.
 
+## Detailed Integration Guide
+
+If you need a host-app oriented setup guide with examples for checkout, webhook, status sync, and production hardening, read:
+
+- `docs/INTEGRATION_GUIDE.id.md`
+
 ## Minimal Config
 
 ```env
@@ -109,3 +115,6 @@ Before publishing this package publicly:
 3. Copy this README and a license file into that repository.
 4. Use manual package verification with `composer install` and `composer test`.
 5. Replace path repository usage in host apps with normal Composer installation.
+
+
+
