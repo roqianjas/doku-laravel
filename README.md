@@ -82,7 +82,7 @@ This repository now includes:
 
 - `phpunit.xml.dist`
 - package-local unit tests under `tests/Unit`
-- a starter GitHub Actions workflow under `.github/workflows/tests.yml`
+- a lightweight manual test flow via `composer install` and `composer test`
 
 ## Tunnel And Local Testing Notes
 
@@ -107,22 +107,5 @@ Before publishing this package publicly:
 1. Confirm `roqianjas/doku-laravel` is the final Composer package name you want to publish.
 2. Move `packages/doku-laravel` into its own repository root.
 3. Copy this README and a license file into that repository.
-4. Add CI for unit and feature coverage in an environment with `pdo_sqlite` or MySQL.
+4. Use manual package verification with `composer install` and `composer test`.
 5. Replace path repository usage in host apps with normal Composer installation.
-
-
-## Publish Workflow
-
-If this folder has been exported into its own repository directory, the usual next steps are:
-
-```bash
-composer install
-composer test
-git init
-git branch -M main
-git add .
-git commit -m "Initial package extraction"
-git remote add origin git@github.com:roqianjas/doku-laravel.git
-git push -u origin main
-```
-
