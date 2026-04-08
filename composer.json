@@ -1,0 +1,51 @@
+{
+    "name": "roqianjas/doku-laravel",
+    "description": "Reusable Laravel-first integration for DOKU Checkout.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "doku",
+        "payment-gateway",
+        "checkout",
+        "webhook"
+    ],
+    "require": {
+        "php": "^8.3",
+        "ext-json": "*",
+        "illuminate/contracts": "^13.0",
+        "illuminate/http": "^13.0",
+        "illuminate/support": "^13.0"
+    },
+    "require-dev": {
+        "illuminate/config": "^13.0",
+        "phpunit/phpunit": "^12.5"
+    },
+    "suggest": {
+        "laravel/framework": "Required by host applications that want package auto-discovery and config publishing."
+    },
+    "autoload": {
+        "psr-4": {
+            "DokuLaravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DokuLaravel\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit -c phpunit.xml.dist"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DokuLaravel\\DokuServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
+
+
